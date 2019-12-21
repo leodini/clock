@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="clock">
+        <h2>the time is now</h2>
+        <div class="time">
+            <div><span id="hour">00</span><span>Hours</span></div>
+            <div><span id="minutes">00</span><span>Minutes</span></div>
+            <div><span id="seconds">00</span><span>Seconds</span></div>
+        </div>
+    </div>
+    
+
+    <script>
+
+        function clock(){
+            let hours = document.getElementById('hour')
+            let minutes = document.getElementById('minutes')
+            let seconds = document.getElementById('seconds')
+
+            let h = new Date().getHours()
+            let m = new Date().getMinutes()
+            let s = new Date().getSeconds()
+        
+            hours.innerHTML = h
+            minutes.innerHTML = m
+            seconds.innerHTML = s
+        }
+
+        var interval = setInterval(clock, 1000)
+    </script>
+</body>
+</html>
