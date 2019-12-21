@@ -21,14 +21,23 @@
 
     <script>
 
+        function addZero(i){
+            if(i < 10){
+                i = '0' + i
+            }
+            return i
+        }
+
         function clock(){
             let hours = document.getElementById('hour')
             let minutes = document.getElementById('minutes')
             let seconds = document.getElementById('seconds')
 
-            let h = new Date().getHours()
-            let m = new Date().getMinutes()
-            let s = new Date().getSeconds()
+            let date = new Date()
+
+            let h = addZero(date.getHours())
+            let m = addZero(date.getMinutes())
+            let s = addZero(date.getSeconds())
         
             hours.innerHTML = h
             minutes.innerHTML = m
